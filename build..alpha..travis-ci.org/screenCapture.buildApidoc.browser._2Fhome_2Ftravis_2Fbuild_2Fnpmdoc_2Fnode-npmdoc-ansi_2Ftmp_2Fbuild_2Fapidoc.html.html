@@ -1,0 +1,2349 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/TooTallNate/ansi.js#readme">ansi (v0.3.1)</a>
+</h1>
+<h4>Advanced ANSI formatting tool for Node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi">module ansi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer">
+            function <span class="apidocSignatureSpan">ansi.</span>Colorer
+            <span class="apidocSignatureSpan">(cursor, base)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor">
+            function <span class="apidocSignatureSpan">ansi.</span>Cursor
+            <span class="apidocSignatureSpan">(stream, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ansi.</span>Colorer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ansi.</span>Cursor.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi.Colorer">module ansi.Colorer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.Colorer">
+            function <span class="apidocSignatureSpan">ansi.</span>Colorer
+            <span class="apidocSignatureSpan">(cursor, base)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi.Colorer.prototype">module ansi.Colorer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype._setColorCode">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>_setColorCode
+            <span class="apidocSignatureSpan">(code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.black">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>black
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.blue">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>blue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightBlack">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightBlack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightBlue">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightBlue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightCyan">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightCyan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightGreen">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightGreen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightMagenta">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightMagenta
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightRed">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightRed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightWhite">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightWhite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.brightYellow">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightYellow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.cyan">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>cyan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.green">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>green
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.grey">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>grey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.hex">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>hex
+            <span class="apidocSignatureSpan">(color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.magenta">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>magenta
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.red">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>red
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.reset">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.rgb">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>rgb
+            <span class="apidocSignatureSpan">(r, g, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.white">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>white
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer.prototype.yellow">
+            function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>yellow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi.Cursor">module ansi.Cursor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.Cursor">
+            function <span class="apidocSignatureSpan">ansi.</span>Cursor
+            <span class="apidocSignatureSpan">(stream, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi.Cursor.prototype">module ansi.Cursor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.back">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>back
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.beep">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>beep
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.black">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>black
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.blue">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>blue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.bold">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>bold
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightBlack">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightBlack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightBlue">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightBlue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightCyan">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightCyan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightGreen">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightGreen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightMagenta">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightMagenta
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightRed">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightRed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightWhite">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightWhite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.brightYellow">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightYellow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.buffer">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>buffer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.cyan">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>cyan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.down">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>down
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.eraseData">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>eraseData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.eraseLine">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>eraseLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.flush">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>flush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.forward">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>forward
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.goto">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>goto
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.green">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>green
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.grey">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>grey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.hex">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>hex
+            <span class="apidocSignatureSpan">(color)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.hide">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>hide
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.horizontalAbsolute">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>horizontalAbsolute
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.inverse">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>inverse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.italic">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>italic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.magenta">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>magenta
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.nextLine">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>nextLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.previousLine">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>previousLine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.queryPosition">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>queryPosition
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.red">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>red
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.reset">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.resetBold">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetBold
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.resetInverse">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetInverse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.resetItalic">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetItalic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.resetUnderline">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetUnderline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.restorePosition">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>restorePosition
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.rgb">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>rgb
+            <span class="apidocSignatureSpan">(r, g, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.savePosition">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>savePosition
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.scrollDown">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>scrollDown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.scrollUp">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>scrollUp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.show">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>show
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.underline">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>underline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.up">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>up
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.white">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>white
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.write">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>write
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.Cursor.prototype.yellow">
+            function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>yellow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi" id="apidoc.module.ansi">module ansi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer" id="apidoc.element.ansi.Colorer">
+        function <span class="apidocSignatureSpan">ansi.</span>Colorer
+        <span class="apidocSignatureSpan">(cursor, base)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Colorer(cursor, base) {
+  this.current = null
+  this.cursor = cursor
+  this.base = base
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor" id="apidoc.element.ansi.Cursor">
+        function <span class="apidocSignatureSpan">ansi.</span>Cursor
+        <span class="apidocSignatureSpan">(stream, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cursor(stream, options) {
+  if (!(this instanceof Cursor)) {
+    return new Cursor(stream, options)
+  }
+  if (typeof stream != 'object' || typeof stream.write != 'function') {
+    throw new Error('a valid Stream instance must be passed in')
+  }
+
+  // the stream to use
+  this.stream = stream
+
+  // when 'enabled' is false then all the functions are no-ops except for write()
+  this.enabled = options &amp;&amp; options.enabled
+  if (typeof this.enabled === 'undefined') {
+    this.enabled = stream.isTTY
+  }
+  this.enabled = !!this.enabled
+
+  // then `buffering` is true, then `write()` calls are buffered in
+  // memory until `flush()` is invoked
+  this.buffering = !!(options &amp;&amp; options.buffering)
+  this._buffer = []
+
+  // controls the foreground and background colors
+  this.fg = this.foreground = new Colorer(this, 0)
+  this.bg = this.background = new Colorer(this, 10)
+
+  // defaults
+  this.Bold = false
+  this.Italic = false
+  this.Underline = false
+  this.Inverse = false
+
+  // keep track of the number of "newlines" that get encountered
+  this.newlines = 0
+  emitNewlineEvents(stream)
+  stream.on('newline', function () {
+    this.newlines++
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi.Colorer" id="apidoc.module.ansi.Colorer">module ansi.Colorer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.Colorer" id="apidoc.element.ansi.Colorer.Colorer">
+        function <span class="apidocSignatureSpan">ansi.</span>Colorer
+        <span class="apidocSignatureSpan">(cursor, base)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Colorer(cursor, base) {
+  this.current = null
+  this.cursor = cursor
+  this.base = base
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi.Colorer.prototype" id="apidoc.module.ansi.Colorer.prototype">module ansi.Colorer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype._setColorCode" id="apidoc.element.ansi.Colorer.prototype._setColorCode">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>_setColorCode
+        <span class="apidocSignatureSpan">(code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setColorCode(code) {
+  var c = String(code)
+  if (this.current === c) return
+  this.cursor.enabled &amp;&amp; this.cursor.write(prefix + c + suffix)
+  this.current = c
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.black" id="apidoc.element.ansi.Colorer.prototype.black">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>black
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">black = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.blue" id="apidoc.element.ansi.Colorer.prototype.blue">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>blue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blue = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightBlack" id="apidoc.element.ansi.Colorer.prototype.brightBlack">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightBlack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightBlack = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightBlue" id="apidoc.element.ansi.Colorer.prototype.brightBlue">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightBlue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightBlue = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightCyan" id="apidoc.element.ansi.Colorer.prototype.brightCyan">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightCyan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightCyan = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightGreen" id="apidoc.element.ansi.Colorer.prototype.brightGreen">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightGreen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightGreen = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightMagenta" id="apidoc.element.ansi.Colorer.prototype.brightMagenta">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightMagenta
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightMagenta = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightRed" id="apidoc.element.ansi.Colorer.prototype.brightRed">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightRed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightRed = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightWhite" id="apidoc.element.ansi.Colorer.prototype.brightWhite">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightWhite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightWhite = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.brightYellow" id="apidoc.element.ansi.Colorer.prototype.brightYellow">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>brightYellow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightYellow = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.cyan" id="apidoc.element.ansi.Colorer.prototype.cyan">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>cyan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cyan = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.green" id="apidoc.element.ansi.Colorer.prototype.green">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>green
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">green = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.grey" id="apidoc.element.ansi.Colorer.prototype.grey">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>grey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grey = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+``` js
+var ansi = require('ansi')
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .red()                 // Set font color to red
+  .bg.<span class="apidocCodeKeywordSpan">grey</span>()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().underline()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.hex" id="apidoc.element.ansi.Colorer.prototype.hex">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>hex
+        <span class="apidocSignatureSpan">(color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hex = function (color) {
+  return this.rgb.apply(this, hex(color))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.<span class="apidocCodeKeywordSpan">hex</span>('#660000').bold().underline()
+
+// You can use the regular logging functions, text will be green:
+console.log('This is blood red, bold text')
+
+// To reset just the foreground color:
+cursor.fg.reset()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.magenta" id="apidoc.element.ansi.Colorer.prototype.magenta">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>magenta
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">magenta = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.red" id="apidoc.element.ansi.Colorer.prototype.red">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>red
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">red = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var ansi = require('ansi')
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .<span class="apidocCodeKeywordSpan">red</span>()                 // Set font color to red
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.reset" id="apidoc.element.ansi.Colorer.prototype.reset">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  this._setColorCode(this.base + 39)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .red()                 // Set font color to red
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.<span class="apidocCodeKeywordSpan">reset</span>()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().underline()
+
+// You can use the regular logging functions, text will be green:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.rgb" id="apidoc.element.ansi.Colorer.prototype.rgb">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>rgb
+        <span class="apidocSignatureSpan">(r, g, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rgb = function (r, g, b) {
+  var base = this.base + 38
+    , code = rgb(r, g, b)
+  this._setColorCode(base + ';5;' + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.white" id="apidoc.element.ansi.Colorer.prototype.white">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>white
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">white = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Colorer.prototype.yellow" id="apidoc.element.ansi.Colorer.prototype.yellow">
+        function <span class="apidocSignatureSpan">ansi.Colorer.prototype.</span>yellow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yellow = function () {
+  this._setColorCode(this.base + code)
+  return this.cursor
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi.Cursor" id="apidoc.module.ansi.Cursor">module ansi.Cursor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.Cursor" id="apidoc.element.ansi.Cursor.Cursor">
+        function <span class="apidocSignatureSpan">ansi.</span>Cursor
+        <span class="apidocSignatureSpan">(stream, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cursor(stream, options) {
+  if (!(this instanceof Cursor)) {
+    return new Cursor(stream, options)
+  }
+  if (typeof stream != 'object' || typeof stream.write != 'function') {
+    throw new Error('a valid Stream instance must be passed in')
+  }
+
+  // the stream to use
+  this.stream = stream
+
+  // when 'enabled' is false then all the functions are no-ops except for write()
+  this.enabled = options &amp;&amp; options.enabled
+  if (typeof this.enabled === 'undefined') {
+    this.enabled = stream.isTTY
+  }
+  this.enabled = !!this.enabled
+
+  // then `buffering` is true, then `write()` calls are buffered in
+  // memory until `flush()` is invoked
+  this.buffering = !!(options &amp;&amp; options.buffering)
+  this._buffer = []
+
+  // controls the foreground and background colors
+  this.fg = this.foreground = new Colorer(this, 0)
+  this.bg = this.background = new Colorer(this, 10)
+
+  // defaults
+  this.Bold = false
+  this.Italic = false
+  this.Underline = false
+  this.Inverse = false
+
+  // keep track of the number of "newlines" that get encountered
+  this.newlines = 0
+  emitNewlineEvents(stream)
+  stream.on('newline', function () {
+    this.newlines++
+  }.bind(this))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi.Cursor.prototype" id="apidoc.module.ansi.Cursor.prototype">module ansi.Cursor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.back" id="apidoc.element.ansi.Cursor.prototype.back">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>back
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">back = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.beep" id="apidoc.element.ansi.Cursor.prototype.beep">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>beep
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">beep = function () {
+  this.enabled &amp;&amp; this.write('\x07')
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.black" id="apidoc.element.ansi.Cursor.prototype.black">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>black
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">black = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.blue" id="apidoc.element.ansi.Cursor.prototype.blue">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>blue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blue = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.bold" id="apidoc.element.ansi.Cursor.prototype.bold">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>bold
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bold = function () {
+  if (this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + c + suffix)
+  this[name] = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').<span class="apidocCodeKeywordSpan">bold</span>().underline()
+
+// You can use the regular logging functions, text will be green:
+console.log('This is blood red, bold text')
+
+// To reset just the foreground color:
+cursor.fg.reset()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightBlack" id="apidoc.element.ansi.Cursor.prototype.brightBlack">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightBlack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightBlack = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightBlue" id="apidoc.element.ansi.Cursor.prototype.brightBlue">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightBlue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightBlue = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightCyan" id="apidoc.element.ansi.Cursor.prototype.brightCyan">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightCyan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightCyan = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightGreen" id="apidoc.element.ansi.Cursor.prototype.brightGreen">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightGreen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightGreen = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightMagenta" id="apidoc.element.ansi.Cursor.prototype.brightMagenta">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightMagenta
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightMagenta = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightRed" id="apidoc.element.ansi.Cursor.prototype.brightRed">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightRed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightRed = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightWhite" id="apidoc.element.ansi.Cursor.prototype.brightWhite">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightWhite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightWhite = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.brightYellow" id="apidoc.element.ansi.Cursor.prototype.brightYellow">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>brightYellow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brightYellow = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.buffer" id="apidoc.element.ansi.Cursor.prototype.buffer">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>buffer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function () {
+  this.buffering = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.cyan" id="apidoc.element.ansi.Cursor.prototype.cyan">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>cyan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cyan = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.down" id="apidoc.element.ansi.Cursor.prototype.down">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>down
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">down = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.eraseData" id="apidoc.element.ansi.Cursor.prototype.eraseData">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>eraseData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eraseData = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.eraseLine" id="apidoc.element.ansi.Cursor.prototype.eraseLine">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>eraseLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eraseLine = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log('This will still be bold')
+
+// to go to a location (x,y) on the console
+// note: 1-indexed, not 0-indexed:
+cursor.goto(10, 5).write('Five down, ten over')
+
+// to clear the current line:
+cursor.horizontalAbsolute(0).<span class="apidocCodeKeywordSpan">eraseLine</span>().write('Starting again')
+
+// to go to a different column on the current line:
+cursor.horizontalAbsolute(5).write('column five')
+
+// Clean up after yourself!
+cursor.reset()
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.flush" id="apidoc.element.ansi.Cursor.prototype.flush">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>flush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">flush = function () {
+  this.buffering = false
+  var str = this._buffer.map(function (args) {
+    if (args.length != 1) throw new Error('unexpected args length! ' + args.length);
+    return args[0];
+  }).join('');
+  this._buffer.splice(0); // empty
+  this.write(str);
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.forward" id="apidoc.element.ansi.Cursor.prototype.forward">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>forward
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forward = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.goto" id="apidoc.element.ansi.Cursor.prototype.goto">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>goto
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">goto = function (x, y) {
+  x = x | 0
+  y = y | 0
+  this.enabled &amp;&amp; this.write(prefix + y + ';' + x + 'H')
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// To reset just the foreground color:
+cursor.fg.reset()
+
+console.log('This will still be bold')
+
+// to go to a location (x,y) on the console
+// note: 1-indexed, not 0-indexed:
+cursor.<span class="apidocCodeKeywordSpan">goto</span>(10, 5).write('Five down, ten over')
+
+// to clear the current line:
+cursor.horizontalAbsolute(0).eraseLine().write('Starting again')
+
+// to go to a different column on the current line:
+cursor.horizontalAbsolute(5).write('column five')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.green" id="apidoc.element.ansi.Cursor.prototype.green">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>green
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">green = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.grey" id="apidoc.element.ansi.Cursor.prototype.grey">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>grey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grey = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+``` js
+var ansi = require('ansi')
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .red()                 // Set font color to red
+  .bg.<span class="apidocCodeKeywordSpan">grey</span>()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().underline()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.hex" id="apidoc.element.ansi.Cursor.prototype.hex">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>hex
+        <span class="apidocSignatureSpan">(color)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hex = function (color) {
+  return this.foreground.hex(color)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.<span class="apidocCodeKeywordSpan">hex</span>('#660000').bold().underline()
+
+// You can use the regular logging functions, text will be green:
+console.log('This is blood red, bold text')
+
+// To reset just the foreground color:
+cursor.fg.reset()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.hide" id="apidoc.element.ansi.Cursor.prototype.hide">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>hide
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hide = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.horizontalAbsolute" id="apidoc.element.ansi.Cursor.prototype.horizontalAbsolute">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>horizontalAbsolute
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">horizontalAbsolute = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log('This will still be bold')
+
+// to go to a location (x,y) on the console
+// note: 1-indexed, not 0-indexed:
+cursor.goto(10, 5).write('Five down, ten over')
+
+// to clear the current line:
+cursor.<span class="apidocCodeKeywordSpan">horizontalAbsolute</span>(0).eraseLine().write('Starting again')
+
+// to go to a different column on the current line:
+cursor.horizontalAbsolute(5).write('column five')
+
+// Clean up after yourself!
+cursor.reset()
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.inverse" id="apidoc.element.ansi.Cursor.prototype.inverse">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>inverse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inverse = function () {
+  if (this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + c + suffix)
+  this[name] = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.italic" id="apidoc.element.ansi.Cursor.prototype.italic">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>italic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">italic = function () {
+  if (this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + c + suffix)
+  this[name] = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.magenta" id="apidoc.element.ansi.Cursor.prototype.magenta">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>magenta
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">magenta = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.nextLine" id="apidoc.element.ansi.Cursor.prototype.nextLine">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>nextLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nextLine = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.previousLine" id="apidoc.element.ansi.Cursor.prototype.previousLine">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>previousLine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">previousLine = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.queryPosition" id="apidoc.element.ansi.Cursor.prototype.queryPosition">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>queryPosition
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">queryPosition = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.red" id="apidoc.element.ansi.Cursor.prototype.red">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>red
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">red = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var ansi = require('ansi')
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .<span class="apidocCodeKeywordSpan">red</span>()                 // Set font color to red
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.reset" id="apidoc.element.ansi.Cursor.prototype.reset">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  this.enabled &amp;&amp; this.write(prefix + '0' + suffix)
+  this.Bold = false
+  this.Italic = false
+  this.Underline = false
+  this.Inverse = false
+  this.foreground.current = null
+  this.background.current = null
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .red()                 // Set font color to red
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.<span class="apidocCodeKeywordSpan">reset</span>()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().underline()
+
+// You can use the regular logging functions, text will be green:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.resetBold" id="apidoc.element.ansi.Cursor.prototype.resetBold">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetBold
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetBold = function () {
+  if (!this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + r + suffix)
+  this[name] = false
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.resetInverse" id="apidoc.element.ansi.Cursor.prototype.resetInverse">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetInverse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetInverse = function () {
+  if (!this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + r + suffix)
+  this[name] = false
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.resetItalic" id="apidoc.element.ansi.Cursor.prototype.resetItalic">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetItalic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetItalic = function () {
+  if (!this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + r + suffix)
+  this[name] = false
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.resetUnderline" id="apidoc.element.ansi.Cursor.prototype.resetUnderline">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>resetUnderline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetUnderline = function () {
+  if (!this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + r + suffix)
+  this[name] = false
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.restorePosition" id="apidoc.element.ansi.Cursor.prototype.restorePosition">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>restorePosition
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restorePosition = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.rgb" id="apidoc.element.ansi.Cursor.prototype.rgb">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>rgb
+        <span class="apidocSignatureSpan">(r, g, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rgb = function (r, g, b) {
+  return this.foreground.rgb(r, g, b)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.savePosition" id="apidoc.element.ansi.Cursor.prototype.savePosition">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>savePosition
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">savePosition = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.scrollDown" id="apidoc.element.ansi.Cursor.prototype.scrollDown">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>scrollDown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrollDown = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.scrollUp" id="apidoc.element.ansi.Cursor.prototype.scrollUp">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>scrollUp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrollUp = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.show" id="apidoc.element.ansi.Cursor.prototype.show">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>show
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.underline" id="apidoc.element.ansi.Cursor.prototype.underline">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>underline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underline = function () {
+  if (this[name]) return this
+  this.enabled &amp;&amp; this.write(prefix + c + suffix)
+  this[name] = true
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .bg.grey()             // Set background color to grey
+  .write('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().<span class="apidocCodeKeywordSpan">underline</span>()
+
+// You can use the regular logging functions, text will be green:
+console.log('This is blood red, bold text')
+
+// To reset just the foreground color:
+cursor.fg.reset()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.up" id="apidoc.element.ansi.Cursor.prototype.up">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>up
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">up = function () {
+  var c = code
+  if (arguments.length &gt; 0) {
+    c = toArray(arguments).map(Math.round).join(';') + code
+  }
+  this.enabled &amp;&amp; this.write(prefix + c)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.white" id="apidoc.element.ansi.Cursor.prototype.white">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>white
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">white = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.write" id="apidoc.element.ansi.Cursor.prototype.write">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>write
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data) {
+  if (this.buffering) {
+    this._buffer.push(arguments)
+  } else {
+    this.stream.write.apply(this.stream, arguments)
+  }
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ansi = require('ansi')
+  , cursor = ansi(process.stdout)
+
+// You can chain your calls forever:
+cursor
+  .red()                 // Set font color to red
+  .bg.grey()             // Set background color to grey
+  .<span class="apidocCodeKeywordSpan">write</span>('Hello World!') // Write 'Hello World!' to stdout
+  .bg.reset()            // Reset the bgcolor before writing the trailing \n,
+                         //      to avoid Terminal glitches
+  .write('\n')           // And a final \n to wrap things up
+
+// Rendering modes are persistent:
+cursor.hex('#660000').bold().underline()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.Cursor.prototype.yellow" id="apidoc.element.ansi.Cursor.prototype.yellow">
+        function <span class="apidocSignatureSpan">ansi.Cursor.prototype.</span>yellow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yellow = function () {
+  return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
