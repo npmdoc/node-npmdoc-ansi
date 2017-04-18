@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.ansi">
+            function <span class="apidocSignatureSpan"></span>ansi
+            <span class="apidocSignatureSpan">(stream, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.ansi.Colorer">
             function <span class="apidocSignatureSpan">ansi.</span>Colorer
             <span class="apidocSignatureSpan">(cursor, base)</span>
@@ -757,10 +766,60 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.ansi.ansi">module ansi.ansi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.ansi.ansi">
+            function <span class="apidocSignatureSpan">ansi.</span>ansi
+            <span class="apidocSignatureSpan">(stream, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.ansi.Colorer">
+            function <span class="apidocSignatureSpan">ansi.ansi.</span>Colorer
+            <span class="apidocSignatureSpan">(cursor, base)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ansi.ansi.Cursor">
+            function <span class="apidocSignatureSpan">ansi.ansi.</span>Cursor
+            <span class="apidocSignatureSpan">(stream, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.ansi" id="apidoc.module.ansi">module ansi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.ansi" id="apidoc.element.ansi.ansi">
+        function <span class="apidocSignatureSpan"></span>ansi
+        <span class="apidocSignatureSpan">(stream, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ansi(stream, options) {
+  if (stream._ansicursor) {
+    return stream._ansicursor
+  } else {
+    return stream._ansicursor = new Cursor(stream, options)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -2340,6 +2399,99 @@ cursor.hex(&#x27;#660000&#x27;).bold().underline()
     <ul>
     <li>description and source-code<pre class="apidocCodePre">yellow = function () {
   return this.foreground[color]()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ansi.ansi" id="apidoc.module.ansi.ansi">module ansi.ansi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.ansi.ansi" id="apidoc.element.ansi.ansi.ansi">
+        function <span class="apidocSignatureSpan">ansi.</span>ansi
+        <span class="apidocSignatureSpan">(stream, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ansi(stream, options) {
+  if (stream._ansicursor) {
+    return stream._ansicursor
+  } else {
+    return stream._ansicursor = new Cursor(stream, options)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.ansi.Colorer" id="apidoc.element.ansi.ansi.Colorer">
+        function <span class="apidocSignatureSpan">ansi.ansi.</span>Colorer
+        <span class="apidocSignatureSpan">(cursor, base)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Colorer(cursor, base) {
+  this.current = null
+  this.cursor = cursor
+  this.base = base
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ansi.ansi.Cursor" id="apidoc.element.ansi.ansi.Cursor">
+        function <span class="apidocSignatureSpan">ansi.ansi.</span>Cursor
+        <span class="apidocSignatureSpan">(stream, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cursor(stream, options) {
+  if (!(this instanceof Cursor)) {
+    return new Cursor(stream, options)
+  }
+  if (typeof stream != &#x27;object&#x27; || typeof stream.write != &#x27;function&#x27;) {
+    throw new Error(&#x27;a valid Stream instance must be passed in&#x27;)
+  }
+
+  // the stream to use
+  this.stream = stream
+
+  // when &#x27;enabled&#x27; is false then all the functions are no-ops except for write()
+  this.enabled = options &#x26;&#x26; options.enabled
+  if (typeof this.enabled === &#x27;undefined&#x27;) {
+    this.enabled = stream.isTTY
+  }
+  this.enabled = !!this.enabled
+
+  // then `buffering` is true, then `write()` calls are buffered in
+  // memory until `flush()` is invoked
+  this.buffering = !!(options &#x26;&#x26; options.buffering)
+  this._buffer = []
+
+  // controls the foreground and background colors
+  this.fg = this.foreground = new Colorer(this, 0)
+  this.bg = this.background = new Colorer(this, 10)
+
+  // defaults
+  this.Bold = false
+  this.Italic = false
+  this.Underline = false
+  this.Inverse = false
+
+  // keep track of the number of &#x22;newlines&#x22; that get encountered
+  this.newlines = 0
+  emitNewlineEvents(stream)
+  stream.on(&#x27;newline&#x27;, function () {
+    this.newlines++
+  }.bind(this))
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
