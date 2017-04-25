@@ -1,6 +1,6 @@
 # npmdoc-ansi
 
-#### api documentation for  [ansi (v0.3.1)](https://github.com/TooTallNate/ansi.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ansi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ansi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ansi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ansi)
+#### basic api documentation for  [ansi (v0.3.1)](https://github.com/TooTallNate/ansi.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ansi.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ansi) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ansi.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ansi)
 
 #### Advanced ANSI formatting tool for Node.js
 
@@ -65,7 +65,8 @@
         "url": "git://github.com/TooTallNate/ansi.js.git"
     },
     "scripts": {},
-    "version": "0.3.1"
+    "version": "0.3.1",
+    "bin": {}
 }
 ```
 
